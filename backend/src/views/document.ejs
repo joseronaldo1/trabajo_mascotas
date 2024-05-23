@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentación de la API</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2, h3 {
+            color: #333;
+        }
+        pre {
+            background: #f4f4f4;
+            padding: 10px;
+            border: 1px solid #ddd;
+            overflow-x: auto;
+        }
+        code {
+            color: #c7254e;
+            background: #f9f2f4;
+            padding: 2px 4px;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Documentación de la API</h1>
+
+        <h2>Autenticación</h2>
+        <h3>Validar Usuario</h3>
+        <p><code>POST /api/validar</code></p>
+        <p>Valida las credenciales de un usuario.</p>
+        <pre>
+{
+    "username": "string",
+    "password": "string"
+}
+        </pre>
+
+        <h2>Categorías</h2>
+        <h3>Registrar Categoría</h3>
+        <p><code>POST /api/categorias</code></p>
+        <p>Registra una nueva categoría.</p>
+        <pre>
+{
+    "nombre": "string",
+    "descripcion": "string"
+}
+        </pre>
+
+        <h3>Actualizar Categoría</h3>
+        <p><code>PUT /api/categorias/:id</code></p>
+        <p>Actualiza una categoría existente.</p>
+        <pre>
+{
+    "nombre": "string",
+    "descripcion": "string"
+}
+        </pre>
+
+        <h3>Eliminar Categoría</h3>
+        <p><code>DELETE /api/categorias/:id</code></p>
+        <p>Elimina una categoría existente.</p>
+
+        <h3>Buscar Categoría</h3>
+        <p><code>GET /api/categorias/:id</code></p>
+        <p>Obtiene los detalles de una categoría específica.</p>
+
+        <h3>Listar Categorías</h3>
+        <p><code>GET /api/categorias</code></p>
+        <p>Obtiene una lista de todas las categorías.</p>
+
+        <h2>Géneros</h2>
+        <h3>Registrar Género</h3>
+        <p><code>POST /api/generos</code></p>
+        <p>Registra un nuevo género.</p>
+        <pre>
+{
+    "nombre": "string",
+    "descripcion": "string"
+}
+        </pre>
+
+        <h3>Actualizar Género</h3>
+        <p><code>PUT /api/generos/:id</code></p>
+        <p>Actualiza un género existente.</p>
+        <pre>
+{
+    "nombre": "string",
+    "descripcion": "string"
+}
+        </pre>
+
+        <h3>Eliminar Género</h3>
+        <p><code>DELETE /api/generos/:id</code></p>
+        <p>Elimina un género existente.</p>
+
+        <h3>Buscar Género</h3>
+        <p><code>GET /api/generos/:id</code></p>
+        <p>Obtiene los detalles de un género específico.</p>
+
+        <h3>Listar Géneros</h3>
+        <p><code>GET /api/generos</code></p>
+        <p>Obtiene una lista de todos los géneros.</p>
+
+        <h2>Mascotas</h2>
+        <h3>Registrar Mascota</h3>
+        <p><code>POST /api/mascotas</code></p>
+        <p>Registra una nueva mascota.</p>
+        <pre>
+{
+    "nombre": "string",
+    "raza": "string",
+    "edad": "number",
+    "genero": "string"
+}
+        </pre>
+
+        <h3>Actualizar Mascota</h3>
+        <p><code>PUT /api/mascotas/:id</code></p>
+        <p>Actualiza una mascota existente.</p>
+        <pre>
+{
+    "nombre": "string",
+    "raza": "string",
+    "edad": "number",
+    "genero": "string"
+}
+        </pre>
+
+        <h3>Eliminar Mascota</h3>
+        <p><code>DELETE /api/mascotas/:id</code></p>
+        <p>Elimina una mascota existente.</p>
+
+        <h3>Buscar Mascota</h3>
+        <p><code>GET /api/mascotas/:id</code></p>
+        <p>Obtiene los detalles de una mascota específica.</p>
+
+        <h3>Listar Mascotas</h3>
+        <p><code>GET /api/mascotas</code></p>
+        <p>Obtiene una lista de todas las mascotas.</p>
+
+        <h2>Razas</h2>
+        <h3>Registrar Raza</h3>
+        <p><code>POST /api/razas</code></p>
+        <p>Registra una nueva raza.</p>
+        <pre>
+{
+    "nombre": "string",
+    "descripcion": "string"
+}
+        </pre>
+
+        <h3>Actualizar Raza</h3>
+        <p><code>PUT /api/razas/:id</code></p>
+        <p>Actualiza una raza existente.</p>
+        <pre>
+{
+    "nombre": "string",
+    "descripcion": "string"
+}
+        </pre>
+
+        <h3>Eliminar Raza</h3>
+        <p><code>DELETE /api/razas/:id</code></p>
+        <p>Elimina una raza existente.</p>
+
+        <h3>Buscar Raza</h3>
+        <p><code>GET /api/razas/:id</code></p>
+        <p>Obtiene los detalles de una raza específica.</p>
+
+        <h3>Listar Razas</h3>
+        <p><code>GET /api/razas</code></p>
+        <p>Obtiene una lista de todas las razas.</p>
+
+        <h2>Usuarios</h2>
+        <h3>Registrar Usuario</h3>
+        <p><code>POST /api/usuarios</code></p>
+        <p>Registra un nuevo usuario.</p>
+        <pre>
+{
+    "nombre": "string",
+    "email": "string",
+    "password": "string"
+}
+        </pre>
+
+        <h3>Actualizar Usuario</h3>
+        <p><code>PUT /api/usuarios/:id</code></p>
+        <p>Actualiza un usuario existente.</p>
+        <pre>
+{
+    "nombre": "string",
+    "email": "string",
+    "password": "string"
+}
+        </pre>
+
+        <h3>Eliminar Usuario</h3>
+        <p><code>DELETE /api/usuarios/:id</code></p>
+        <p>Elimina un usuario existente.</p>
+
+        <h3>Buscar Usuario</h3>
+        <p><code>GET /api/usuarios/:id</code></p>
+        <p>Obtiene los detalles de un usuario específico.</p>
+
+        <h3>Listar Usuarios</h3>
+        <p><code>GET /api/usuarios</code></p>
+        <p>Obtiene una lista de todos los usuarios.</p>
+    </div>
+</body>
+</html>
